@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pooja D Anchan | AI & LLM Engineering Portfolio</title>
+  <meta name="description" content="Pooja D Anchan — Software Engineer building expertise in AI & LLM Engineering, with 8 years in Storage Platform Validation & QA and strong Cloud & DevOps foundations." />
+  <meta name="theme-color" content="#08111c" />
+  <meta property="og:title" content="Pooja D Anchan | AI & LLM Engineering Portfolio" />
+  <meta property="og:description" content="AI & LLM Engineering · Cloud & DevOps · Storage Platform Validation & QA" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+:root{
+  --bg:#07111f;
+  --bg-2:#0b1728;
+  --surface:#0f1c2e;
+  --surface-2:#13243a;
+  --paper:#f7f9fc;
+  --paper-2:#eef3f8;
+  --ink:#152033;
+  --muted:#637085;
+  --muted-dark:#9bb0c7;
+  --line:#dce4ee;
+  --line-dark:rgba(255,255,255,.10);
+  --accent:#5eead4;
+  --accent-2:#7dd3fc;
+  --accent-3:#f4c95d;
+  --white:#ffffff;
+  --shadow:0 24px 70px rgba(8,22,40,.12);
+  --shadow-soft:0 10px 35px rgba(8,22,40,.08);
+  --radius-xl:28px;
+  --radius-lg:20px;
+  --radius-md:14px;
+  --container:1160px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button,input,textarea,select{font:inherit}
+
+::selection{background:rgba(94,234,212,.3);color:#05111d}
+
+.container{width:min(calc(100% - 40px), var(--container));margin:0 auto}
+.section-pad{padding:104px 0}
+.section-dark{background:var(--bg);color:var(--white)}
+
+.skip-link{
+  position:fixed;left:16px;top:16px;z-index:9999;
+  transform:translateY(-140%);background:#fff;color:#111;
+  padding:10px 14px;border-radius:10px;box-shadow:var(--shadow-soft)
+}
+.skip-link:focus{transform:translateY(0)}
+
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(7,17,31,.78);
+  backdrop-filter:blur(16px) saturate(130%);
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.nav-wrap{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:12px;color:#fff;font-weight:750;letter-spacing:-.02em}
+.brand-mark{
+  width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#06111e;font-weight:900;box-shadow:0 8px 24px rgba(94,234,212,.22)
+}
+.brand-text{font-size:.98rem}
+.primary-nav{display:flex;align-items:center;gap:28px;color:#c8d4e3;font-size:.92rem;font-weight:600}
+.primary-nav a{position:relative;transition:color .2s ease}
+.primary-nav a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--accent);transition:width .2s ease}
+.primary-nav a:hover{color:#fff}.primary-nav a:hover:after{width:100%}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.nav-toggle span{display:block;width:24px;height:2px;margin:5px 0;background:#fff;border-radius:99px}
+
+.hero{
+  min-height:690px;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(94,234,212,.12), transparent 33%),
+    radial-gradient(circle at 88% 22%, rgba(125,211,252,.11), transparent 29%),
+    linear-gradient(180deg,#07111f 0%,#091424 68%,#0b1728 100%);
+  color:#fff
+}
+.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:40px 40px;mask-image:linear-gradient(to bottom,#000,transparent 92%)
+}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(80px);opacity:.22;pointer-events:none}
+.hero-glow-one{width:300px;height:300px;background:var(--accent);left:-80px;top:180px}
+.hero-glow-two{width:360px;height:360px;background:#3b82f6;right:-130px;bottom:30px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr);gap:74px;align-items:center}
+.eyebrow{margin:0 0 16px;font-size:.75rem;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:#4b6b8e}
+.hero .eyebrow,.section-dark .eyebrow,.contact-section .eyebrow{color:var(--accent)}
+.hero h1{margin:0;max-width:760px;font-size:clamp(2.35rem,4.2vw,3.65rem);line-height:1.02;letter-spacing:-.035em;font-weight:760}
+.hero-roles{margin:18px 0 0;font-size:clamp(1.05rem,1.7vw,1.28rem);font-weight:620;color:#d7e3ef}
+.hero-roles span{color:var(--accent);padding:0 6px}
+.hero-summary{max-width:780px;margin:28px 0 0;color:#b9c9da;font-size:1.08rem}
+.hero-summary strong{color:#fff;font-weight:700}
+.hero-quote{max-width:760px;margin:26px 0 0;padding-left:18px;border-left:2px solid var(--accent);color:#d7e3ef;font-size:1.02rem;font-style:italic}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:750;font-size:.92rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#74e8ff);color:#06111e;box-shadow:0 12px 30px rgba(94,234,212,.18)}
+.btn-primary:hover{box-shadow:0 14px 38px rgba(94,234,212,.26)}
+.btn-ghost{color:#e6eef8;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.035)}
+.btn-ghost:hover{border-color:rgba(94,234,212,.5);background:rgba(255,255,255,.06)}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:28px;color:#8fa5bc;font-size:.9rem}
+.hero-meta a{color:#d8e6f3}.dot{width:4px;height:4px;border-radius:50%;background:#43647f}
+
+.hero-panel{position:relative;padding:30px;border:1px solid rgba(255,255,255,.10);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));box-shadow:0 28px 90px rgba(0,0,0,.20);overflow:hidden}
+.hero-panel:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2),transparent)}
+.panel-label{font-size:.72rem;font-weight:800;letter-spacing:.16em;color:#7790aa;margin-bottom:24px}
+.journey-step{display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start}
+.journey-number{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:.75rem;font-weight:850;color:#99aec3;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08)}
+.journey-step.active .journey-number{background:rgba(94,234,212,.12);color:var(--accent);border-color:rgba(94,234,212,.36)}
+.journey-step h3{margin:0;color:#fff;font-size:1.08rem}.journey-step p{margin:5px 0 0;color:#8fa5bc;font-size:.9rem;line-height:1.55}
+.journey-line{height:30px;margin-left:18px;border-left:1px dashed rgba(255,255,255,.16)}
+.panel-footer{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);color:#c7d5e3;font-size:.9rem}
+
+.stat-strip{background:#fff;border-bottom:1px solid var(--line)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:28px 28px 30px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:1.15rem;color:#122238;letter-spacing:-.02em}.stat span{display:block;margin-top:5px;color:var(--muted);font-size:.9rem}
+
+.section-heading{max-width:760px;margin-bottom:42px}
+.section-heading h2{margin:0;font-size:clamp(2.25rem,4vw,3.45rem);line-height:1.02;letter-spacing:-.045em}
+.section-heading>p:last-child{margin:18px 0 0;color:var(--muted);font-size:1.02rem}
+.section-dark .section-heading>p:last-child{color:#91a7bd}
+
+.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.expertise-card{padding:28px;border:1px solid var(--line-dark);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));min-height:260px;transition:transform .22s ease,border-color .22s ease,background .22s ease}
+.expertise-card:hover{transform:translateY(-4px);border-color:rgba(94,234,212,.26);background:linear-gradient(180deg,rgba(94,234,212,.055),rgba(255,255,255,.02))}
+.icon-wrap{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(94,234,212,.10);border:1px solid rgba(94,234,212,.18);color:var(--accent);font-weight:850;font-size:.78rem}
+.expertise-card h3{margin:20px 0 10px;color:#fff;font-size:1.15rem}.expertise-card p{margin:0;color:#93a8bd;font-size:.94rem}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag-row span{display:inline-flex;align-items:center;min-height:28px;padding:4px 9px;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.01em;border:1px solid var(--line);background:#fff;color:#516177}
+.section-dark .tag-row span,.project-card.featured .tag-row span{border-color:rgba(255,255,255,.09);background:rgba(255,255,255,.045);color:#a9bdd0}
+
+.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.project-card{position:relative;padding:30px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:var(--shadow-soft);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;overflow:hidden}
+.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#c7d4e3}
+.project-card.featured{grid-column:span 2;background:linear-gradient(135deg,#0b1728,#10243d);color:#fff;border-color:rgba(255,255,255,.08)}
+.project-card.featured:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-110px;top:-110px;background:radial-gradient(circle,rgba(94,234,212,.16),transparent 66%)}
+.project-topline{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}.project-index{font-size:.78rem;font-weight:850;color:#9aabbc}.project-type{font-size:.72rem;font-weight:850;letter-spacing:.12em;color:#2f7584}.featured .project-type{color:var(--accent)}
+.project-card h3{margin:0;font-size:1.34rem;letter-spacing:-.025em}.project-card p{margin:12px 0 0;color:var(--muted);font-size:.96rem}.featured p{color:#9fb4c9}
+.project-card ul{margin:18px 0 0;padding-left:20px;color:#a9bdd0}.project-card li{margin:8px 0}.project-card li::marker{color:var(--accent)}
+.metric-row{display:flex;gap:24px;margin-top:18px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.85rem;color:#627185}.metric-row strong{color:#17263b;font-size:1rem}
+.project-link{display:inline-flex;margin-top:22px;font-weight:800;color:#147d8a;font-size:.9rem}.featured .project-link{color:var(--accent)}
+.project-link:hover{text-decoration:underline;text-underline-offset:4px}
+.project-link-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.center-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px}
+.center-cta .btn-ghost{color:#183044;border-color:#c9d6e2;background:#fff;box-shadow:0 8px 24px rgba(8,22,40,.06)}
+.center-cta .btn-ghost:hover{border-color:#83cfd0;background:#f4fbfb}
+
+.research-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.research-card{padding:28px;border:1px solid rgba(255,255,255,.10);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.022));min-height:220px;transition:transform .22s ease,border-color .22s ease,background .22s ease}
+.research-card:hover{transform:translateY(-4px);border-color:rgba(94,234,212,.26);background:linear-gradient(180deg,rgba(94,234,212,.055),rgba(255,255,255,.02))}
+.research-kicker{font-size:.7rem;font-weight:850;letter-spacing:.13em;color:var(--accent);margin-bottom:14px}
+.research-card h3{margin:0;color:#fff;font-size:1.14rem;letter-spacing:-.015em}
+.research-card p{margin:10px 0 0;color:#94a9bd;font-size:.93rem}
+.research-bridge{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);color:#b8c9da;font-size:.77rem;font-weight:720}
+.research-bridge span:nth-child(even){color:var(--accent)}
+.research-note{margin:18px 0 0;color:#7f96ad;font-size:.88rem}
+
+.research-shell{display:grid;grid-template-columns:.72fr 1.28fr;gap:66px;align-items:start}
+.research-intro{position:sticky;top:110px}.research-intro h2{margin:0;font-size:clamp(2.3rem,4vw,3.4rem);line-height:1.02;letter-spacing:-.045em}.research-intro p{color:var(--muted);margin:20px 0 0}
+.research-list{display:grid;gap:14px}
+.research-item{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(13,33,57,.045)}
+.research-num{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#eef7f7;color:#1a7f82;font-weight:850;font-size:.82rem}.research-item h3{margin:0;font-size:1.05rem}.research-item p{margin:7px 0 0;color:var(--muted);font-size:.93rem}.research-note{grid-column:2;margin:14px 0 0;color:#758398;font-size:.88rem}
+
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:66px;align-items:start}.about-copy h3{margin:0;font-size:clamp(1.65rem,3vw,2.2rem);line-height:1.18;letter-spacing:-.03em}.about-copy p{margin:20px 0 0;color:var(--muted);font-size:1rem}.about-principles{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.about-principles span{padding:9px 12px;border-radius:10px;background:#edf4f8;color:#385166;font-size:.82rem;font-weight:750}
+
+.timeline{position:relative;display:grid;gap:0}.timeline:before{content:"";position:absolute;left:176px;top:8px;bottom:8px;width:1px;background:rgba(255,255,255,.10)}
+.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:54px;padding:30px 0;border-bottom:1px solid rgba(255,255,255,.08)}.timeline-item:last-child{border-bottom:0}.timeline-date{font-size:.74rem;font-weight:850;letter-spacing:.08em;color:#6f8aa5;text-align:right;padding-top:4px}.timeline-content{position:relative;padding-left:10px}.timeline-content:before{content:"";position:absolute;left:-34px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(94,234,212,.08)}.timeline-label{display:block;font-size:.72rem;letter-spacing:.12em;color:var(--accent);font-weight:850}.timeline-content h3{margin:7px 0 0;color:#fff;font-size:1.22rem}.timeline-content p{margin:10px 0 0;color:#8fa6bc;max-width:820px}
+
+.learning-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:start}.credential-list{display:grid;gap:10px}.credential{display:grid;grid-template-columns:118px 1fr;gap:18px;padding:18px 20px;border:1px solid var(--line);border-radius:15px;background:#fff}.credential>span{font-size:.73rem;font-weight:850;letter-spacing:.06em;color:#7a8a9d;padding-top:2px}.credential strong{display:block;color:#17263b}.credential small{display:block;margin-top:4px;color:#738196;font-size:.82rem}.featured-credential{background:linear-gradient(135deg,#f0fbf9,#f3f8fd);border-color:#cfe8e3}
+
+.contact-section{background:linear-gradient(135deg,#07111f 0%,#0c1a2b 100%);color:#fff;position:relative;overflow:hidden}.contact-section:after{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-190px;top:-180px;background:radial-gradient(circle,rgba(94,234,212,.12),transparent 68%)}.contact-inner{position:relative;z-index:1;max-width:880px;text-align:center}.contact-inner h2{margin:0;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.05em;line-height:1}.contact-inner>p:not(.eyebrow){margin:22px auto 0;max-width:720px;color:#9fb2c6}.contact-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+
+.site-footer{background:#050c16;color:#9bafc4;border-top:1px solid rgba(255,255,255,.06)}.footer-wrap{min-height:110px;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;font-size:.84rem}.footer-wrap>div:first-child strong{display:block;color:#fff}.footer-wrap>div:first-child span{display:block;margin-top:3px}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:#fff}.footer-copy{text-align:right}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.project-card,.expertise-card{transition:none}}
+
+@media (max-width:980px){
+  .section-pad{padding:84px 0}
+  .hero{min-height:auto;padding-top:100px}
+  .hero-grid{grid-template-columns:1fr;gap:42px}.hero-panel{max-width:680px}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.stat:nth-child(3){padding-left:0}
+  .expertise-grid{grid-template-columns:repeat(2,1fr)}
+  .research-grid{grid-template-columns:1fr}
+  .research-shell,.about-grid,.learning-grid{grid-template-columns:1fr;gap:34px}.research-intro{position:static}.research-note{grid-column:auto}
+}
+
+@media (max-width:760px){
+  .container{width:min(calc(100% - 28px),var(--container))}
+  .section-pad{padding:72px 0}
+  .nav-toggle{display:block}.primary-nav{position:fixed;inset:74px 0 auto;background:rgba(7,17,31,.98);display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:14px 20px 24px;border-bottom:1px solid rgba(255,255,255,.08);transform:translateY(-130%);opacity:0;pointer-events:none;transition:.25s ease}.primary-nav.open{transform:translateY(0);opacity:1;pointer-events:auto}.primary-nav a{width:100%;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .hero{padding-top:80px}.hero h1{font-size:clamp(2.2rem,10vw,3.15rem)}.hero-grid{gap:34px}.hero-summary{font-size:1rem}.hero-panel{padding:24px}
+  .stat-grid{grid-template-columns:1fr}.stat,.stat:first-child,.stat:nth-child(3){padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}
+  .expertise-grid,.projects-grid{grid-template-columns:1fr}.project-card.featured{grid-column:auto}.project-card{padding:24px}
+  .research-item{grid-template-columns:46px 1fr;padding:20px}.research-num{width:38px;height:38px}
+  .timeline:before{left:7px}.timeline-item{grid-template-columns:1fr;gap:8px;padding-left:28px}.timeline-date{text-align:left}.timeline-content{padding-left:0}.timeline-content:before{left:-25px;top:9px}
+  .credential{grid-template-columns:1fr;gap:6px}
+  .footer-wrap{grid-template-columns:1fr;text-align:center;padding:26px 0}.footer-links{justify-content:center}.footer-copy{text-align:center}
+}
+
+@media (max-width:520px){
+  .brand-text{display:none}.hero-actions,.contact-actions{display:grid;grid-template-columns:1fr}.btn{width:100%}.hero-meta{gap:8px}.dot{display:none}.hero-meta>*{width:100%}
+  .project-topline{align-items:flex-start}.metric-row{flex-direction:column;gap:8px}.expertise-card{min-height:auto}
+}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Pooja D Anchan home">
+        <span class="brand-mark">P</span>
+        <span class="brand-text">Pooja D Anchan</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-pad">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI & LLM ENGINEERING · CLOUD & DEVOPS · PLATFORM QA</p>
+          <h1>Pooja D Anchan</h1>
+          <p class="hero-roles">Software Engineer <span>·</span> Building Expertise in AI & LLM Engineering</p>
+          <p class="hero-summary">
+            I bring <strong>8 years of Storage Platform Validation & QA experience</strong> together with Cloud and DevOps foundations, and practical AI/LLM work across RAG, AI agents, fine-tuning, tokenization, embeddings, vector search, and multimodal systems.
+          </p>
+          <p class="hero-quote">“I enjoy learning, understanding things deeply, and turning what I learn into practical solutions that create real value.”</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore my work</a>
+            <a class="btn btn-ghost" href="https://github.com/pooja-d-anchan" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="btn btn-ghost" href="https://huggingface.co/PoojaDAnchan" target="_blank" rel="noreferrer">Hugging Face ↗</a>
+          </div>
+          <div class="hero-meta">
+            <span>Dubai, UAE</span>
+            <span class="dot"></span>
+            <span>AI / LLM Engineering focus</span>
+            <span class="dot"></span>
+            <a href="assets/Pooja_D_Anchan_AI_LLM_UAE_ATS_Resume.pdf" target="_blank">Resume ↗</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal delay-1" aria-label="Career path snapshot">
+          <div class="panel-label">ENGINEERING JOURNEY</div>
+          <div class="journey-step">
+            <span class="journey-number">01</span>
+            <div>
+              <h3>Validate</h3>
+              <p>Storage platforms · High availability · Reliability · Automation</p>
+            </div>
+          </div>
+          <div class="journey-line"></div>
+          <div class="journey-step">
+            <span class="journey-number">02</span>
+            <div>
+              <h3>Automate & Deploy</h3>
+              <p>AWS · Azure · Kubernetes · Terraform · CI/CD · GitOps</p>
+            </div>
+          </div>
+          <div class="journey-line"></div>
+          <div class="journey-step active">
+            <span class="journey-number">03</span>
+            <div>
+              <h3>Build with AI</h3>
+              <p>Transformers · RAG · Agents · Fine-Tuning · Evaluation · LLM Systems</p>
+            </div>
+          </div>
+          <div class="panel-footer">Quality-first thinking across every layer.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stat-strip" aria-label="Portfolio highlights">
+      <div class="container stat-grid">
+        <div class="stat"><strong>8 years</strong><span>Professional engineering experience</span></div>
+        <div class="stat"><strong>3 years</strong><span>Cloud & DevOps project implementation</span></div>
+        <div class="stat"><strong>AI + LLM</strong><span>RAG · Agents · Fine-Tuning · Tokenization</span></div>
+        <div class="stat"><strong>Systems mindset</strong><span>Debugging · Reliability · Automation</span></div>
+      </div>
+    </section>
+
+    <section id="expertise" class="section-pad section-dark">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">WHAT I BUILD & STUDY</p>
+          <h2>Current engineering focus</h2>
+          <p>My current work and learning sit at the intersection of AI/LLM engineering, cloud-native systems, automation, and the quality-first engineering foundation from my earlier career.</p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card reveal">
+            <div class="icon-wrap">AI</div>
+            <h3>AI & LLM Systems</h3>
+            <p>Transformer architectures, prompt engineering, structured outputs, evaluation, guardrails, and application architecture.</p>
+            <div class="tag-row"><span>Transformers</span><span>Gemini</span><span>Pydantic</span></div>
+          </article>
+          <article class="expertise-card reveal delay-1">
+            <div class="icon-wrap">R</div>
+            <h3>RAG & Retrieval</h3>
+            <p>Embeddings, chunking, semantic search, vector databases, retrieval quality, grounded generation, and multimodal retrieval.</p>
+            <div class="tag-row"><span>pgvector</span><span>Pinecone</span><span>RAG</span></div>
+          </article>
+          <article class="expertise-card reveal delay-2">
+            <div class="icon-wrap">FT</div>
+            <h3>LLM Fine-Tuning</h3>
+            <p>Hands-on fine-tuning across encoder-only, decoder-only, and encoder-decoder Transformer architectures.</p>
+            <div class="tag-row"><span>PyTorch</span><span>Hugging Face</span><span>CUDA</span></div>
+          </article>
+          <article class="expertise-card reveal">
+            <div class="icon-wrap">AG</div>
+            <h3>AI Agents</h3>
+            <p>Agentic workflows that combine LLM reasoning with deterministic analysis, tools, evidence, and structured remediation.</p>
+            <div class="tag-row"><span>Google ADK</span><span>Gemini</span><span>Python</span></div>
+          </article>
+          <article class="expertise-card reveal delay-1">
+            <div class="icon-wrap">☁</div>
+            <h3>Cloud & DevOps</h3>
+            <p>Containerized applications, Kubernetes, infrastructure as code, GitOps, automation, and CI/CD across AWS and Azure.</p>
+            <div class="tag-row"><span>AWS</span><span>Kubernetes</span><span>Terraform</span></div>
+          </article>
+          <article class="expertise-card reveal delay-2">
+            <div class="icon-wrap">QA</div>
+            <h3>Reliability & QA</h3>
+            <p>Platform validation, high availability, release readiness, root-cause analysis, test automation, and quality-first engineering.</p>
+            <div class="tag-row"><span>Validation</span><span>Automation</span><span>RCA</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Projects</h2>
+          <p>Projects that show the transition from systems reliability and cloud engineering into applied AI and LLM engineering.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card featured reveal">
+            <div class="project-topline"><span class="project-index">01</span><span class="project-type">AI & LLM</span></div>
+            <h3>Secure EHR Insight & Clinical Validator</h3>
+            <p>Privacy-aware clinical semantic search and RAG over MIMIC-IV transcripts using local biomedical embeddings and PostgreSQL/pgvector.</p>
+            <ul>
+              <li>Generated 768-dimensional biomedical embeddings locally for 10,000 clinical records.</li>
+              <li>Implemented PII redaction with Microsoft Presidio.</li>
+              <li>Designed API/UI and guardrail layers with FastAPI, Streamlit, Docker, AWS EC2 and Gemini.</li>
+            </ul>
+            <div class="tag-row"><span>Python</span><span>pgvector</span><span>ModernBERT</span><span>Presidio</span></div>
+            <a class="project-link" href="https://github.com/pooja-d-anchan/Secure-EHR-Insight-Clinical-Validator" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card reveal delay-1">
+            <div class="project-topline"><span class="project-index">02</span><span class="project-type">AI AGENT</span></div>
+            <h3>Kubernetes Investigation Agent</h3>
+            <p>AI-assisted Kubernetes incident investigation that parses operational evidence, combines deterministic root-cause analysis with Gemini through Google ADK, and produces evidence-grounded remediation guidance.</p>
+            <div class="tag-row"><span>Google ADK</span><span>Gemini</span><span>Kubernetes</span><span>pytest</span></div>
+            <a class="project-link" href="https://github.com/pooja-d-anchan/K8s-investigation-Agent" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card reveal delay-2">
+            <div class="project-topline"><span class="project-index">03</span><span class="project-type">FINE-TUNING</span></div>
+            <h3>Transformer Fine-Tuning Portfolio</h3>
+            <p>Fine-tuned DistilBERT for sentiment classification, DistilGPT2 for news classification, and FLAN-T5 Large for summarization.</p>
+            <div class="metric-row"><span><strong>89.8%</strong> news accuracy</span><span><strong>0.42</strong> ROUGE-1</span></div>
+            <div class="tag-row"><span>Hugging Face</span><span>PyTorch</span><span>CUDA</span></div>
+            <a class="project-link" href="https://github.com/pooja-d-anchan/LLM-Finetuning-Basics" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-index">04</span><span class="project-type">RAG</span></div>
+            <h3>Advanced & Multimodal RAG</h3>
+            <p>Document and image retrieval workflow using embeddings and Pinecone, with experimentation around chunking, retrieval depth, overlap, and evaluation.</p>
+            <div class="tag-row"><span>Python</span><span>Pinecone</span><span>Embeddings</span><span>Multimodal</span></div>
+            <a class="project-link" href="https://github.com/pooja-d-anchan/Advanced_RAG" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card reveal delay-1">
+            <div class="project-topline"><span class="project-index">05</span><span class="project-type">AUTOMATION</span></div>
+            <h3>Python DevOps Automation Toolkit</h3>
+            <p>Python automation toolkit for health checks, environment diagnostics, AWS auditing, structured logging, automated tests, security checks, and CI/CD quality gates.</p>
+            <div class="tag-row"><span>Python</span><span>pytest</span><span>Ruff</span><span>mypy</span><span>Bandit</span></div>
+            <a class="project-link" href="https://github.com/pooja-d-anchan/python-devops-automation-toolkit" target="_blank" rel="noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card reveal delay-2">
+            <div class="project-topline"><span class="project-index">06</span><span class="project-type">CLOUD & DEVOPS</span></div>
+            <h3>AWS EKS / GitOps Portfolio</h3>
+            <p>Containerized three-tier and microservices applications on Amazon EKS using Docker, Kubernetes, Terraform, ArgoCD, and GitOps practices.</p>
+            <div class="tag-row"><span>AWS EKS</span><span>Docker</span><span>Terraform</span><span>ArgoCD</span></div>
+            <div class="project-link-row">
+              <a class="project-link" href="https://github.com/pooja-d-anchan/EKS_Retail_Store" target="_blank" rel="noreferrer">Retail Store ↗</a>
+              <a class="project-link" href="https://github.com/pooja-d-anchan/AWS-EKS-Three-Tier-Application" target="_blank" rel="noreferrer">Three-Tier App ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-cta reveal">
+          <a class="btn btn-ghost" href="https://github.com/pooja-d-anchan" target="_blank" rel="noreferrer">Explore all GitHub repositories ↗</a>
+          <a class="btn btn-ghost" href="https://huggingface.co/PoojaDAnchan" target="_blank" rel="noreferrer">View Hugging Face models ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section-pad section-dark">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">RESEARCH TO PRACTICE</p>
+          <h2>Technical deep dives</h2>
+          <p>I use foundational papers, lectures, and structured coursework to build stronger intuition, then connect the concepts back to code, experiments, and project decisions.</p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <div class="research-kicker">FOUNDATIONAL PAPER</div>
+            <h3>Attention Is All You Need</h3>
+            <p>Studying self-attention, multi-head attention, positional encoding, encoder-decoder flow, masking, and feed-forward networks.</p>
+            <div class="research-bridge"><span>Understand</span><span>→</span><span>Implement</span><span>→</span><span>Explain</span></div>
+          </article>
+          <article class="research-card reveal delay-1">
+            <div class="research-kicker">TOKENIZATION</div>
+            <h3>BPE & Tokenizer Engineering</h3>
+            <p>Vocabulary construction, merge rules, sequence length, multilingual tokenization, token fertility, OOV behavior, and custom medical BPE training.</p>
+            <div class="research-bridge"><span>Train</span><span>→</span><span>Inspect</span><span>→</span><span>Compare</span></div>
+          </article>
+          <article class="research-card reveal delay-2">
+            <div class="research-kicker">RETRIEVAL SYSTEMS</div>
+            <h3>RAG Architecture & Evaluation</h3>
+            <p>Chunking, embeddings, vector search, recall/precision tradeoffs, reranking concepts, multimodal retrieval, and grounded generation.</p>
+            <div class="research-bridge"><span>Retrieve</span><span>→</span><span>Evaluate</span><span>→</span><span>Improve</span></div>
+          </article>
+          <article class="research-card reveal">
+            <div class="research-kicker">MODEL BEHAVIOR</div>
+            <h3>Pretraining, Post-training & Autoregression</h3>
+            <p>How next-token prediction works, why autoregressive generation is iterative, and how modern post-training turns foundation models into useful assistants.</p>
+            <div class="research-bridge"><span>Architecture</span><span>→</span><span>Training</span><span>→</span><span>Behavior</span></div>
+          </article>
+          <article class="research-card reveal delay-1">
+            <div class="research-kicker">CURRENT LEARNING</div>
+            <h3>LLM Inference & Advanced Attention</h3>
+            <p>Building intuition around KV cache, RoPE, FlashAttention, MQA/GQA, PagedAttention, and why attention efficiency matters during LLM inference.</p>
+            <div class="research-bridge"><span>Attention</span><span>→</span><span>Memory</span><span>→</span><span>Inference</span></div>
+          </article>
+        </div>
+
+        <p class="research-note reveal">This section is intentionally selective. I only add topics I can explain clearly and connect to implementation.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">BACKGROUND</p>
+          <h2>About me</h2>
+        </div>
+        <div class="about-copy reveal delay-1">
+          <h3>An engineering mindset built around reliability, curiosity, and continuous learning.</h3>
+          <p>I’m a Software Engineer with 8 years of experience in Storage Platform Validation and QA, including high-availability systems, release validation, test automation, debugging, and root-cause analysis.</p>
+          <p>Over the last few years, I expanded that foundation through Cloud and DevOps projects across AWS, Azure, Docker, Kubernetes, Terraform, Jenkins, ArgoCD, GitOps, and Python. My current focus is AI & LLM Engineering. I’m studying the Advanced Route-Production AI & LLM Engineering program from Krish Naik Academy while building practical projects across Transformer concepts, tokenization and custom BPE training, fine-tuning, RAG, multimodal systems, AI agents, structured outputs, and evaluation.</p>
+          <p>I enjoy learning, understanding things deeply, and turning what I learn into useful solutions that create real value.</p>
+          <div class="about-principles">
+            <span>Curious</span><span>Quality-first</span><span>Practical</span><span>Ownership-minded</span><span>Supportive teammate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-pad section-dark">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">EXPERIENCE</p>
+          <h2>Engineering foundation</h2>
+          <p>Professional depth in platform QA and automation, expanded through Cloud, DevOps, and AI engineering.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2023 — PRESENT</div>
+            <div class="timeline-content">
+              <span class="timeline-label">DUBAI, UAE</span>
+              <h3>Professional Development & Technology Transition</h3>
+              <p>Expanded into Cloud, DevOps, and AI/LLM Engineering through certifications, structured learning, and practical projects.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2018 — 2022</div>
+            <div class="timeline-content">
+              <span class="timeline-label">DUBAI, UAE</span>
+              <h3>Relocation & Career Transition</h3>
+              <p>Relocated to Dubai and focused on personal responsibilities while planning the next stage of my technology career.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">MAY 2015 — JUN 2018</div>
+            <div class="timeline-content">
+              <span class="timeline-label">MINDTECK · BENGALURU</span>
+              <h3>Module Lead — Platform QA</h3>
+              <p>Led storage platform test-automation initiatives across strategy, planning, lab/infrastructure requirements, execution, and release delivery. Built and maintained Perl/Linux automation, supported high-availability and reliability validation, partnered on debugging and root-cause analysis, and mentored team members.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">MAY 2012 — APR 2015</div>
+            <div class="timeline-content">
+              <span class="timeline-label">MINDTECK · BENGALURU</span>
+              <h3>Senior Software Engineer — Platform QA</h3>
+              <p>Validated storage platform hardware and firmware across integration, system, performance, capacity, regression, reliability, and release-candidate testing, strengthening my understanding of high availability, release quality, and complex system behaviour.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">MAY 2010 — APR 2012</div>
+            <div class="timeline-content">
+              <span class="timeline-label">MINDTECK · BENGALURU</span>
+              <h3>Software Engineer — Platform Validation</h3>
+              <p>Performed early software and firmware validation and developed an end-to-end automation workflow to detect new builds and automatically update NetApp test hardware for execution.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container learning-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">LEARNING & CREDENTIALS</p>
+          <h2>Continuous learning</h2>
+          <p>I’m deliberately building depth from fundamentals to production-oriented AI systems.</p>
+        </div>
+        <div class="credential-list reveal delay-1">
+          <div class="credential featured-credential">
+            <span>2026 — PRESENT</span>
+            <div><strong>Advanced Route-Production AI & LLM Engineering</strong><small>Krish Naik Academy · Live, hands-on program spanning LLM internals through production-oriented AI systems · Current focus: KV cache & advanced attention</small></div>
+          </div>
+          <div class="credential"><span>2024</span><div><strong>DevOps Certification</strong><small>Intellipaat</small></div></div>
+          <div class="credential"><span>2023</span><div><strong>Azure Solutions Architect Expert</strong><small>Microsoft Certified</small></div></div>
+          <div class="credential"><span>2023</span><div><strong>Azure Administrator Associate</strong><small>Microsoft Certified</small></div></div>
+          <div class="credential"><span>2023</span><div><strong>Azure Fundamentals</strong><small>Microsoft Certified</small></div></div>
+          <div class="credential"><span>2009</span><div><strong>Bachelor of Engineering</strong><small>Electronics & Communication Engineering</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section section-pad">
+      <div class="container contact-inner reveal">
+        <p class="eyebrow">LET’S CONNECT</p>
+        <h2>Building expertise in AI & LLM engineering.</h2>
+        <p>I’m interested in opportunities where I can bring systems thinking, quality-first engineering, Cloud & DevOps foundations, and growing AI/LLM depth to practical problems while continuing to learn and contribute.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:pooja.d.anchan@gmail.com">Email me</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/pooja-d-anchan" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/pooja-d-anchan" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn btn-ghost" href="https://huggingface.co/PoojaDAnchan" target="_blank" rel="noreferrer">Hugging Face ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Pooja D Anchan</strong>
+        <span>Dubai, UAE</span>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top ↑</a>
+        <a href="assets/Pooja_D_Anchan_AI_LLM_UAE_ATS_Resume.pdf" target="_blank">Resume</a>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> · Engineering portfolio</div>
+    </div>
+  </footer>
+
+  <script>
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.primary-nav');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }));
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const items = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+  items.forEach(item => observer.observe(item));
+} else {
+  items.forEach(item => item.classList.add('visible'));
+}
+
+</script>
+</body>
+</html>
